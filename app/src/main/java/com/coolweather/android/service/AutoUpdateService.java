@@ -37,7 +37,7 @@ public class AutoUpdateService extends Service {
         manager.cancel(pi);
         manager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,triggerAtTime,pi);
        // AutoUpdateService supper = null;
-        return supper.onStartCommand(intent,flags,startId);
+        return super.onStartCommand(intent,flags,startId);
     }
 
     private void updateWeather() {
